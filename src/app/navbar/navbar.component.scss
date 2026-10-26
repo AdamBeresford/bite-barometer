@@ -2,3 +2,10 @@ img {
   width: 64px;
   height: 64px;
 }
+// The account link and the log out button share one navbar-item, so without an
+// explicit gap they sit flush against each other.
+.navbar-end > .navbar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}

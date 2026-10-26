@@ -55,3 +55,19 @@
 .privacy-footnote {
   margin-top: 1rem;
 }
+
+// The deletion copy runs a line longer than the download copy, so without this
+// the two actions sit at different heights. Pushing each to the foot of its
+// card keeps them on the same line whatever the text above does.
+.action-boxes .box {
+  display: flex;
+  flex-direction: column;
+
+  > .button,
+  > .buttons {
+    margin-top: auto;
+    margin-bottom: 0;
+    // Column flex would otherwise stretch the action to the card's full width
+    align-self: flex-start;
+  }
+}
