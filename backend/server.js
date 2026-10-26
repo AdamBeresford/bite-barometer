@@ -6,7 +6,6 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
-const cors = require('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 
@@ -30,7 +29,6 @@ if (config.isProduction) {
 }
 
 app.use(helmet());
-app.use(cors());
 // Bodies here are small JSON payloads; a low cap blunts trivial memory-exhaustion attempts
 app.use(bodyParser.json({ limit: '10kb' }));
 
